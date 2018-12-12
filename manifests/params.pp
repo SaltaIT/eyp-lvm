@@ -1,7 +1,6 @@
 class lvm::params {
 
-  $package_name='lvm'
-  $service_name='lvm'
+  $package_name='lvm2'
 
   case $::osfamily
   {
@@ -27,6 +26,9 @@ class lvm::params {
             {
             }
             /^16.*$/:
+            {
+            }
+            /^18.*$/:
             {
             }
             default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
